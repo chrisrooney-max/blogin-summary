@@ -1,0 +1,34 @@
+[
+  {
+    "id": "sdd-ai-blog",
+    "title": "AI + Specification-Driven Development (SDD): Building Software from Specifications Instead of Assumptions",
+    "url": "https://equalexperts.blogin.co/posts/sdd-ai-blog",
+    "published": "2026-01-01T00:00:00Z",
+    "tags": ["gen-ai"],
+    "content": "One of the most impactful ways I've started using AI isn't for writing code—it's for Specification-Driven Development (SDD). Traditionally, we receive a user story, discuss it with stakeholders, clarify requirements, and then begin implementation. Unfortunately, this often leaves room for ambiguity, resulting in multiple rounds of clarification, rework, and inconsistent implementations. SDD changes that approach: instead of jumping directly into coding, we first create a clear, detailed specification that describes exactly what the software should do, and AI becomes a powerful collaborator in refining that specification and eventually generating implementation artifacts from it. A good specification answers what problem is being solved, who the users are, inputs/outputs, business rules, validations, error scenarios, non-functional requirements, and edge cases. AI is remarkably good at identifying gaps in requirements — e.g. given 'allow customers to update their email address', AI asks about verification, duplicate emails, rate limits, audit logging, and session handling, questions that would otherwise surface late during testing or production. AI can also expand short user stories into full specifications (functional requirements, business rules, API contracts, acceptance criteria, error/edge cases, security and performance expectations, test scenarios), then assist throughout the lifecycle by generating implementation plans, API contracts, database models, and test cases, and by validating the implementation against the spec. The recommended workflow: gather initial requirements, have AI identify ambiguities and missing scenarios, review and refine with stakeholders, freeze the specification, then use AI to generate implementation, tests, and documentation, and validate against the agreed spec. The core argument is that development delays are usually caused by incomplete understanding rather than difficult coding, so a comprehensive, human-reviewed specification — with AI helping ask better questions — turns coding into an execution exercise rather than a guessing game."
+  },
+  {
+    "id": "coding-agent-swarm",
+    "title": "Running a Coding-Agent Swarm From a Chat Window",
+    "url": "https://equalexperts.blogin.co/posts/coding-agent-swarm",
+    "published": "2026-01-15T00:00:00Z",
+    "tags": ["gen-ai"],
+    "content": "The author gave a chat window (a 'driving session') control of their machine to orchestrate other models building software — dispatching work, checking results, and only surfacing when stuck, using Claude desktop with file-system access plus Desktop Commander for a real terminal. Underneath sits a swarm: an orchestrator spins up an isolated git worktree per unit of work, runs a builder model via the pi CLI (a provider-agnostic agent with built-in coding tools) in an agentic loop, gates the output, and merges what passes. The author ran a 'bake-off' hiring process across models: qwen3-coder-tc (a tuned local Qwen3-Coder 30B) worked reliably for mechanical Tier-A work but struggled on feature-size stories; an Unsloth build of the same model never got its tool calls executing; gpt-oss:20b was used only as an automated grader; kimi-k2.7-code hung due to a reasoning-stream issue where reasoning content bypassed pi's content field; and Kimi K3 became the working builder once a thin proxy stripped reasoning fields from the stream so pi could see clean tool calls, first via Ollama Cloud then Vercel AI Gateway for flat pricing. Work is tiered by risk (A: mechanical/CRUD, B: feature logic, C: architectural/security judgment calls handled by a frontier model or human) and token cost is budgeted before routing, since input/output token estimates double as a complexity proxy. Reliability comes from the orchestrator's gates, not the model: a full deterministic test suite, a mechanical inspection rejecting empty or out-of-worktree output, and an independent semantic reviewer that never grades its own work — passing stories squash-merge onto an integration branch and go up as one PR. Run unattended overnight with safeguards (keep the machine awake, cap batch size, prefer flat token pricing, disable the semantic reviewer overnight while keeping deterministic gates, and prove the first story end-to-end before trusting the rest), the swarm merged eight stories in one overnight run, with the same old trust mechanisms — tests, gates, careful merges, human review on risky bits — just applied to orchestration instead of typing."
+  },
+  {
+    "id": "office-move-announcement",
+    "title": "Our London Office Is Moving Floors",
+    "url": "https://equalexperts.blogin.co/posts/office-move-announcement",
+    "published": "2026-01-20T00:00:00Z",
+    "tags": ["facilities"],
+    "content": "Starting next month, the London office is relocating from the 4th floor to the 7th floor of the same building. Desk booking links will be updated and the old floor will be closed for refurbishment. This is a test fixture used only to verify that the tag allowlist correctly skips posts outside #gen-ai, #tech-community, and Uncategorized."
+  },
+  {
+    "id": "friday-retro-notes",
+    "title": "Notes From Friday's Cross-Team Retro",
+    "url": "https://equalexperts.blogin.co/posts/friday-retro-notes",
+    "published": "2026-01-22T00:00:00Z",
+    "tags": ["Uncategorized"],
+    "content": "A short recap of Friday's cross-team retrospective: teams agreed to standardise on trunk-based development, reduce PR review turnaround to under a day, and trial pairing sessions for onboarding new joiners next quarter. This is a test fixture used only to verify that the tag allowlist correctly includes posts tagged Uncategorized."
+  }
+]
