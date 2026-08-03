@@ -30,5 +30,13 @@
     "published": "2026-01-22T00:00:00Z",
     "tags": ["Uncategorized"],
     "content": "A short recap of Friday's cross-team retrospective: teams agreed to standardise on trunk-based development, reduce PR review turnaround to under a day, and trial pairing sessions for onboarding new joiners next quarter. This is a test fixture used only to verify that the tag allowlist correctly includes posts tagged Uncategorized."
+  },
+  {
+    "id": "ai-code-fest-hmrc",
+    "title": "AI Code Fest",
+    "url": "https://equalexperts.blogin.co/posts/ai-code-fest-hmrc",
+    "published": "2026-08-01T00:00:00Z",
+    "tags": ["gen-ai"],
+    "content": "Recaps HMRC's two AI Factory Code Fest events, where Equal Experts worked alongside HMRC, Accenture, and Capgemini to use AI (Sonnet via Bedrock) to accelerate migration of APIs from HMRC's legacy platforms to its strategic API platform. The first Code Fest asked whether AI could accelerate a single API migration that normally takes over a week, compressed into two days — it could, migrating and deploying three APIs, validating two different migration approaches (modern NPS REST backend vs legacy SOAP) on the same API, and building a reusable AI skill that generates Camel YAML from legacy DES metadata. The second Code Fest tested whether the approach could repeat at scale: around 30 APIs were pushed through the factory over two days, with 16 successfully deployed to QA and six tested end-to-end, using a live shared status dashboard so two teams could work in parallel, unblock each other, and feed fixes back into the factory in real time (one markdown issue was diagnosed over lunch and reprocessed the same afternoon). AI handled a significant share of the migration workflow itself — generating transformation logic, investigating deployment issues, and even inspecting sandbox logs to diagnose and help fix its own errors. The piece frames the bigger win as two-fold: AI removes enough repetitive migration work that teams can focus on real delivery problems, and competing supplier teams collaborating as one integrated group was what let the process scale from a single proven API to dozens migrated in parallel — directly supporting HMRC's ambition to become an AI-first tax authority."
   }
 ]
