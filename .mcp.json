@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "blogin": {
+      "type": "http",
+      "url": "https://equalexperts.blogin.co/mcp"
+    }
+  }
+}
