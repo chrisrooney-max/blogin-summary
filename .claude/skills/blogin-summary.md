@@ -5,7 +5,7 @@ description: Check blogin for new posts since the last run and produce a one-sen
 
 Run the `blogin-summarizer` agent to check blogin for new posts and summarize them.
 
-Only analyse posts tagged **#gen-ai**, **#tech-community**, or **Uncategorized** — the agent filters to this tag allowlist before summarizing. Posts with any other tag are skipped.
+Only analyse posts tagged **#gen-ai**, **#tech-community**, **#ai-in-practice**, or **Uncategorized** — the agent filters to this tag allowlist before summarizing. Posts with any other tag are skipped.
 
 $ARGUMENTS (optional): pass through any override, e.g. a different state file path.
 
